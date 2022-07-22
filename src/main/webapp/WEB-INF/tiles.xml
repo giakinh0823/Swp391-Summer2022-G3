@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!--BASE-->
+    
+    <definition name="client" template="/tiles/layouts/client/layout.jsp">
+        <put-attribute name="style" value=""/>
+        <put-attribute name="header" value="/tiles/layouts/client/header.jsp" />
+        <put-attribute name="body" value=""/>
+        <put-attribute name="script" value="" />
+        <put-attribute name="footer" value="/tiles/layouts/client/footer.jsp" />
+    </definition>
+    
+    <definition name="client.not.header.and.footer" template="/tiles/layouts/client/layout.jsp">
+        <put-attribute name="style" value=""/>
+        <put-attribute name="header" value="/tiles/layouts/client/not_header.jsp" />
+        <put-attribute name="body" value=""/>
+        <put-attribute name="script" value="" />
+        <put-attribute name="footer" value="" />
+    </definition>
+    
+    <definition name="admin" template="/tiles/layouts/admin/layout.jsp">
+        <put-attribute name="style" value=""/>
+        <put-attribute name="sliderbar" value="/tiles/layouts/admin/sliderbar.jsp" />
+        <put-attribute name="body" value=""/>
+        <put-attribute name="script" value="" />
+    </definition>
+   
+    <!--CLIENT PAGE-->
+    <definition name="client.error" extends="client">
+        <put-attribute name="title" value="Error page" />
+        <put-attribute name="body" value="/tiles/fragments/error/client/error.jsp" />
+    </definition>
+    
+    <definition name="client.404" extends="client">
+        <put-attribute name="title" value="404 page" />
+        <put-attribute name="body" value="/tiles/fragments/error/client/404.jsp" />
+    </definition>
+    
+    <definition name="client.500" extends="client">
+        <put-attribute name="title" value="500 page" />
+        <put-attribute name="body" value="/tiles/fragments/error/client/500.jsp" />
+    </definition>
+    
+    <definition name="client.access_denied" extends="client">
+        <put-attribute name="title" value="Access denied" />
+        <put-attribute name="body" value="/tiles/fragments/error/client/access_denied.jsp" />
+    </definition>
+    
+    <definition name="client.home" extends="client">
+        <put-attribute name="title" value="Home Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/home.jsp" />
+        <put-attribute name="script" value="/assets/js/client/home.js" />
+    </definition>
+    
+    <definition name="client.login" extends="client">
+        <put-attribute name="title" value="Login Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/login.jsp" />
+    </definition>
+    
+    <definition name="client.profile.change_password" extends="client">
+        <put-attribute name="title" value="Change password" />
+        <put-attribute name="body" value="/tiles/fragments/client/profile/change_password.jsp" />
+    </definition>
+    
+    <definition name="client.profile.edit" extends="client">
+        <put-attribute name="title" value="Edit profile" />
+        <put-attribute name="body" value="/tiles/fragments/client/profile/profile_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/client/profile_edit.js" />
+    </definition>
+    
+    <definition name="client.profile" extends="client">
+        <put-attribute name="title" value="Profile" />
+        <put-attribute name="body" value="/tiles/fragments/client/profile/profile.jsp" />
+    </definition>
+    
+    <definition name="client.reset_password" extends="client">
+        <put-attribute name="title" value="Reset Password Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/reset_password.jsp" />
+    </definition>
+    
+    <definition name="client.new_password" extends="client">
+        <put-attribute name="title" value="Reset Password Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/new_password.jsp" />
+    </definition>
+    
+    <definition name="client.confirm_reset" extends="client">
+        <put-attribute name="title" value="Check Email" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/confirm_reset.jsp" />
+    </definition>
+    
+    <definition name="client.confirm_enable" extends="client">
+        <put-attribute name="title" value="Check Email" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/confirm_enable.jsp" />
+    </definition>
+   
+    <definition name="client.confirm_reset_error" extends="client">
+        <put-attribute name="title" value="Error Send Email" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/confirm_reset_error.jsp" />
+    </definition>
+    
+    <definition name="client.register" extends="client">
+        <put-attribute name="title" value="Signup page" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/register.jsp" />
+    </definition>
+    
+    <definition name="client.register.confirm" extends="client">
+        <put-attribute name="title" value="Confirm Email" />
+        <put-attribute name="body" value="/tiles/fragments/client/auth/confirm_register.jsp" />
+    </definition>
+    
+    <definition name="client.blog" extends="client">
+        <put-attribute name="title" value="Blog" />
+        <put-attribute name="body" value="/tiles/fragments/client/blog/blog.jsp" />
+    </definition>
+    
+    <definition name="client.blog_detail" extends="client">
+        <put-attribute name="body" value="/tiles/fragments/client/blog/blog_detail.jsp" />
+    </definition>
+    
+    
+    <definition name="client.course" extends="client">
+        <put-attribute name="title" value="Course Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/course.jsp" />
+        <put-attribute name="script" value="/assets/js/client/course.js" />
+        <put-attribute name="style" value="/assets/css/course.css" />
+    </definition>
+    
+    <definition name="client.course.detail" extends="client">
+        <put-attribute name="title" value="Course Detail Page" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/course_detail.jsp" />
+        <put-attribute name="script" value="/assets/js/client/course_detail.js" />
+    </definition>
+
+    <definition name="client.course.checkout" extends="client">
+        <put-attribute name="title" value="Course Checkout" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/course_checkout.jsp" />   
+        <put-attribute name="script" value="/assets/js/client/checkout.js" />
+    </definition>
+    
+    <definition name="client.course.registers" extends="client">
+        <put-attribute name="title" value="Course registers" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/registers.jsp" />   
+    </definition>
+    
+    <definition name="client.course.registers.rollback" extends="client">
+        <put-attribute name="title" value="Course registers rollback" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/register_rollback.jsp" />   
+    </definition>
+    
+    <definition name="client.course.learning" extends="client">
+        <put-attribute name="title" value="My Learning" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/learning.jsp" />   
+    </definition>
+    
+    <definition name="client.course.learning.detail" extends="client.not.header.and.footer">
+        <put-attribute name="title" value="My course" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/course_learning_detail.jsp" />   
+        <put-attribute name="script" value="/assets/js/client/course_learning_detail.js" />
+    </definition>
+    
+    <definition name="client.course.learning.quizzes" extends="client.not.header.and.footer">
+        <put-attribute name="title" value="Quizzes" />
+        <put-attribute name="body" value="/tiles/fragments/client/course/course_learning_quizzes.jsp" />   
+        <put-attribute name="script" value="/assets/js/client/course_learning_quizzes.js" />
+    </definition>
+    <!--ADMIN PAGE-->
+    
+    <definition name="admin.404" extends="admin">
+        <put-attribute name="title" value="Error 404" />
+        <put-attribute name="body" value="/tiles/fragments/error/admin/404.jsp" />
+    </definition>
+    
+    <definition name="admin.500" extends="admin">
+        <put-attribute name="title" value="Error 500" />
+        <put-attribute name="body" value="/tiles/fragments/error/admin/500.jsp" />
+    </definition>
+    
+    <definition name="admin.access_denied" extends="admin">
+        <put-attribute name="title" value="Access denied" />
+        <put-attribute name="body" value="/tiles/fragments/error/admin/access_denied.jsp" />
+    </definition>
+    
+    <definition name="admin.dashboard" extends="admin">
+        <put-attribute name="title" value="Admin dashboard" />
+        <put-attribute name="body" value="/tiles/fragments/admin/dashboard.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/dashboard.js" />
+    </definition>
+    
+    <definition name="admin.setting" extends="admin">
+        <put-attribute name="title" value="Admin setting" />
+        <put-attribute name="body" value="/tiles/fragments/admin/setting/setting.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/setting.js" />
+    </definition>
+    
+    <definition name="admin.setting.create" extends="admin">
+        <put-attribute name="title" value="Admin create setting" />
+        <put-attribute name="body" value="/tiles/fragments/admin/setting/setting_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/setting_create.js" />
+    </definition>
+    
+    <definition name="admin.setting.edit" extends="admin">
+        <put-attribute name="title" value="Admin edit setting" />
+        <put-attribute name="body" value="/tiles/fragments/admin/setting/setting_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/setting_edit.js" />
+    </definition>
+    
+    <definition name="admin.setting.detail" extends="admin">
+        <put-attribute name="title" value="Admin detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/setting/setting_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.slider" extends="admin">
+        <put-attribute name="title" value="Marketing Slider" />
+        <put-attribute name="body" value="/tiles/fragments/admin/slider/slider.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/slider.js" />
+    </definition>
+    
+    <definition name="admin.slider_detail" extends="admin">
+        <put-attribute name="title" value="Detail Slider" />
+        <put-attribute name="body" value="/tiles/fragments/admin/slider/slider_detail.jsp" />
+    </definition>   
+    
+    <definition name="admin.slider_add" extends="admin">
+        <put-attribute name="title" value="Add Slider create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/slider/slider_add.jsp" />
+    </definition>
+    
+    <definition name="admin.slider_edit" extends="admin">
+        <put-attribute name="title" value="Edit Slider" />
+        <put-attribute name="body" value="/tiles/fragments/admin/slider/slider_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/slider_edit.js" />
+    </definition>   
+    
+    <definition name="admin.role" extends="admin">
+        <put-attribute name="title" value="Admin role" />
+        <put-attribute name="body" value="/tiles/fragments/admin/role/role.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/role.js" />
+    </definition>
+    
+    <definition name="admin.role.edit" extends="admin">
+        <put-attribute name="title" value="Admin role edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/role/role_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/role_edit.js" />
+    </definition>
+    
+    <definition name="admin.role.feature.create" extends="admin">
+        <put-attribute name="title" value="Admin feature create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/role/role_feature_create.jsp" />
+    </definition>
+    
+    <definition name="admin.role.feature.detail" extends="admin">
+        <put-attribute name="title" value="Admin feature" />
+        <put-attribute name="body" value="/tiles/fragments/admin/role/role_feature_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.subject" extends="admin">
+        <put-attribute name="title" value="Admin subject" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/subject.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/subject.js" />
+    </definition>
+    
+    <definition name="admin.subject_create" extends="admin">
+        <put-attribute name="title" value="Admin subject create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/subject_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/subject_create.js" />
+    </definition>
+    
+    <definition name="admin.subject.detail" extends="admin">
+        <put-attribute name="title" value="Admin subject detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/subject_detail.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/subject_detail.js" />
+    </definition>
+    
+    <definition name="admin.subject.edit" extends="admin">
+        <put-attribute name="title" value="Admin subject edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/subject_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/subject_detail.js" />
+    </definition>
+    
+    <definition name="admin.subject.price_package" extends="admin">
+        <put-attribute name="title" value="Admin price package" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/price_package.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/price_package.js" />
+    </definition>
+    
+    <definition name="admin.subject.price_package.create" extends="admin">
+        <put-attribute name="title" value="Create price package" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/price_package_create.jsp" />
+    </definition>
+    
+    <definition name="admin.subject.price_package.detail" extends="admin">
+        <put-attribute name="title" value="Price package edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/price_package_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.subject.dimension" extends="admin">
+        <put-attribute name="title" value="Admin dimension" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/dimension.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/dimension.js" />
+    </definition>
+    
+    <definition name="admin.subject.dimension.create" extends="admin">
+        <put-attribute name="title" value="Admin create dimension" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/dimension_create.jsp" />
+    </definition>
+    
+    <definition name="admin.subject.dimension.edit" extends="admin">
+        <put-attribute name="title" value="Admin edit dimension" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/dimension_edit.jsp" />
+    </definition>
+    
+    <definition name="admin.subject.dimension.detail" extends="admin">
+        <put-attribute name="title" value="Admin detail dimension" />
+        <put-attribute name="body" value="/tiles/fragments/admin/subject/dimension_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.lesson" extends="admin">
+        <put-attribute name="title" value="Admin lesson" />
+        <put-attribute name="body" value="/tiles/fragments/admin/lesson/lesson.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/lesson.js" />
+    </definition>
+    
+    <definition name="admin.lesson.lesson_subject" extends="admin">
+        <put-attribute name="title" value="Admin lesson" />
+        <put-attribute name="body" value="/tiles/fragments/admin/lesson/lesson_subject.jsp" />
+    </definition>
+    
+    <definition name="admin.lesson.detail" extends="admin">
+        <put-attribute name="title" value="Admin lesson detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/lesson/lesson_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.lesson.create" extends="admin">
+        <put-attribute name="title" value="Admin lesson create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/lesson/lesson_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/lesson_create.js" />
+    </definition>
+    
+    <definition name="admin.lesson.edit" extends="admin">
+        <put-attribute name="title" value="Admin lesson edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/lesson/lesson_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/lesson_edit.js" />
+    </definition>
+    
+    <definition name="admin.user" extends="admin">
+        <put-attribute name="title" value="Admin user" />
+        <put-attribute name="body" value="/tiles/fragments/admin/user/user.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/user.js" />
+    </definition>
+    
+    <definition name="admin.user.edit" extends="admin">
+        <put-attribute name="title" value="Admin edit user" />
+        <put-attribute name="body" value="/tiles/fragments/admin/user/user_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/user_edit.js" />
+    </definition>
+    
+    <definition name="admin.user.detail" extends="admin">
+        <put-attribute name="title" value="Admin detail user" />
+        <put-attribute name="body" value="/tiles/fragments/admin/user/user_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.user.create" extends="admin">
+        <put-attribute name="title" value="Admin create user" />
+        <put-attribute name="body" value="/tiles/fragments/admin/user/user_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/user_create.js" />
+    </definition>
+    
+    <definition name="admin.post" extends="admin">
+        <put-attribute name="title" value="Admin post" />
+        <put-attribute name="body" value="/tiles/fragments/admin/post/post.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/post.js" />
+    </definition>
+    
+    <definition name="admin.post.edit" extends="admin">
+        <put-attribute name="title" value="Admin post edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/post/post_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/post_edit.js" />
+    </definition>
+    
+    <definition name="admin.post.detail" extends="admin">
+        <put-attribute name="title" value="Admin post edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/post/post_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.post.create" extends="admin">
+        <put-attribute name="title" value="Admin post edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/post/post_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/post_create.js" />
+    </definition>
+    
+    <definition name="admin.question" extends="admin">
+        <put-attribute name="title" value="Admin question" />
+        <put-attribute name="body" value="/tiles/fragments/admin/question/question.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/question.js" />
+    </definition>
+    
+    <definition name="admin.question.create" extends="admin">
+        <put-attribute name="title" value="Admin question create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/question/question_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/question_create.js" />
+    </definition>
+    
+    <definition name="admin.question.edit" extends="admin">
+        <put-attribute name="title" value="Admin question edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/question/question_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/question_edit.js" />
+    </definition>
+    
+    <definition name="admin.question.import" extends="admin">
+        <put-attribute name="title" value="Admin question import" />
+        <put-attribute name="body" value="/tiles/fragments/admin/question/question_import.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/question_import.js" />
+    </definition>
+    
+    <definition name="admin.question.detail" extends="admin">
+        <put-attribute name="title" value="Admin question detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/question/question_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.quizzes" extends="admin">
+        <put-attribute name="title" value="Admin quizzes" />
+        <put-attribute name="body" value="/tiles/fragments/admin/quizzes/quizzes.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/quizzes.js" />
+    </definition>
+    
+    <definition name="admin.quizzes.create" extends="admin">
+        <put-attribute name="title" value="Admin quizzes create" />
+        <put-attribute name="body" value="/tiles/fragments/admin/quizzes/quizzes_create.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/quizzes_create.js" />
+    </definition>
+    
+    <definition name="admin.quizzes.edit" extends="admin">
+        <put-attribute name="title" value="Admin quizzes edit" />
+        <put-attribute name="body" value="/tiles/fragments/admin/quizzes/quizzes_edit.jsp" />
+        <put-attribute name="script" value="/assets/js/admin/quizzes_edit.js" />
+    </definition>
+        
+    <definition name="admin.quizzes.detail" extends="admin">
+        <put-attribute name="title" value="Admin quizzes detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/quizzes/quizzes_detail.jsp" />
+    </definition>
+    
+    <definition name="admin.registers" extends="admin">
+        <put-attribute name="title" value="Admin registers" />
+        <put-attribute name="body" value="/tiles/fragments/admin/registers/registers.jsp" />
+    </definition>
+    
+    <definition name="admin.registers.detail" extends="admin">
+        <put-attribute name="title" value="Admin registers detail" />
+        <put-attribute name="body" value="/tiles/fragments/admin/registers/registers_detail.jsp" />
+    </definition>
+    
+</tiles-definitions>
